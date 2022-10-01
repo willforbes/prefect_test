@@ -1,0 +1,49 @@
+###
+### A complete description of a Prefect Deployment for flow 'log-example-flow'
+###
+name: deploy_git_test
+description: null
+version: d20f4e389b15037d77839d003993ef01
+# The work queue that will handle this deployment's runs
+work_queue_name: work_q_git_test
+tags: []
+parameters: {}
+schedule:
+  cron: 00 18 * * *
+  timezone: Europe/London
+  day_or: true
+infra_overrides: {}
+
+###
+### DO NOT EDIT BELOW THIS LINE
+###
+flow_name: log-example-flow
+manifest_path: null
+infrastructure:
+  type: process
+  env: {}
+  labels: {}
+  name: null
+  command: null
+  stream_output: true
+  _block_document_id: c6d0c8d8-6698-461a-a617-ae75e37b734a
+  _block_document_name: anonymous-fbe97020-7f76-4458-a0a5-805277b73180
+  _is_anonymous: true
+  block_type_slug: process
+  _block_type_slug: process
+storage:
+  repository: https://github.com/willforbes/prefect_test.git
+  reference: main
+  _block_document_id: 11ea7f3e-6be5-4dde-8a56-253267a47c96
+  _block_document_name: test-git
+  _is_anonymous: false
+  block_type_slug: github
+  _block_type_slug: github
+path: ''
+entrypoint: pref_git_test.py:logger_flow
+parameter_openapi_schema:
+  title: Parameters
+  type: object
+  properties: {}
+  required: null
+  definitions: null
