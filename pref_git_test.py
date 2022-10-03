@@ -6,3 +6,4 @@ def logger_flow():
     logger = get_run_logger()
     logger.info("INFO level log message.")
     logger.info(os.path.realpath(__file__))
+    logger.info('Another Log')
